@@ -18,7 +18,7 @@ system-part2 currently overflows 128K on Electron. Please use gcc 5.3 and `USE_P
 
 ## Linux/OSX:
 Verify that each test works correctly:
-1. Each serial enabled should output "%SerialName% millis=12345" every second
+1. Each serial enabled should output `"%SerialName% millis=12345"` every second
 2. Each serial enabled should also echo any received characters back
 3. If HID is enabled, the device should move the pointer every 5 seconds
 4. Device ID should be accessible through vendor-specific requests:
