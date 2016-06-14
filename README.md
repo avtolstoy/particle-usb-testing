@@ -44,7 +44,7 @@ Verify that each test works correctly:
   2. `# pnputil -e > drivers.txt`
   3. Find drivers with "Driver Package Provider: Particle" in drivers.txt, remember oemXXX.inf filename.
   4. `# pnputil -f -d oemXXX.inf`
-3. Install new driver (*!!! NOT NEEDED FOR WINDOWS 10 !!!*) (unsigned https://github.com/avtolstoy/particle-drivers/releases/tag/v6.1.0.0)
+3. Install new driver (**!!! NOT NEEDED FOR WINDOWS 10 !!!**) (signed drivers https://ci.appveyor.com/api/buildjobs/jcdofeop0vnxea4m/artifacts/windows-device-drivers.zip)
   1. `# pnputil -a particle.inf`
 4. Verify that all the tests work correctly with the same steps as in Linux/OSX section.
 5. NOTE: if the device isn't getting correctly detected in Device Manager and "Update Driver" action with automatic search doesn't help, the usb driver cache can be completely cleared:
