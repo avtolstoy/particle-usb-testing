@@ -1,5 +1,5 @@
 ## Intro
-Use `feature/usb-descriptors-dfu` branch for full feature set:
+Use `feature/usb-descriptors-dfu` (https://github.com/spark/firmware/tree/feature/usb-descriptors-dfu) branch for full feature set:
 - Composite USB
 - Vendor requests
 - Bootloader update (descriptors, WCID support)
