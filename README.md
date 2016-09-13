@@ -40,23 +40,10 @@ Verify that each test works correctly:
 
 1. Verify that tests 001_serial, 002_pre060_serial, 003_serial_hid work correctly with Old Windows driver (see Linux/OSX section for steps)
   1. NOTE: usbtool might fail because of caching
-2. Remove old Windows driver:
-  2. `# pnputil -e > drivers.txt`
-  3. Find drivers with "Driver Package Provider: Particle" in drivers.txt, remember oemXXX.inf filename.
-  4. `# pnputil -f -d oemXXX.inf`
-3. Install new driver (**!!! NOT NEEDED FOR WINDOWS 10 !!!**) (signed drivers https://ci.appveyor.com/api/buildjobs/jcdofeop0vnxea4m/artifacts/windows-device-drivers.zip)
-  1. `# pnputil -a particle.inf`
-4. Verify that all the tests work correctly with the same steps as in Linux/OSX section.
-5. NOTE: if the device isn't getting correctly detected in Device Manager and "Update Driver" action with automatic search doesn't help, the usb driver cache can be completely cleared:
-  0. Unplug device
-  1. `# psexec.exe -i -s regedit.exe`
-  2. Navigate to `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USB]`
-  2. Remove everything starting with `VID_2B04`
-  3. Navigate to `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags]`
-  4. Remove everything starting with `2B04`
+2. Install new driver https://ci.appveyor.com/api/buildjobs/05ordriewmsx0cjh/artifacts/installer%2Fparticle_drivers_6.1.0.25.exe
+3. Verify that all the tests work correctly with the same steps as in Linux/OSX section.
 
-
-`usbtool.exe` and `psexec.exe` can be found in `windows` directory.
+`usbtool.exe` can be found in `windows` directory.
 
 ## Inspecting USB descriptors
 
